@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Page</title>
+  <link rel="stylesheet" href="../static/css/feedbacks.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <style>
+    /* Thank you message styles */
+    #thank-you-message {
+        display: none;
+        font-size: 24px; /* Increased font size */
+        font-weight: bold; /* Bold font */
+        color: white; /* White text color for contrast */
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        font-family: 'Roboto', sans-serif; 
+        border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="feedback-container" id="feedback-box">
+    <h1>Feedback Form</h1>
+    <form id="feedback-form">
+        <table>
+          <tr>
+            <td><label for="name">Name:</label></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="name" name="name" required></td>
+          </tr>
+          <tr>
+            <td><label for="phone">Phone Number:</label></td>
+          </tr>
+          <tr>
+            <td><input type="tel" id="phone" name="phone" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email:</label></td>
+          </tr>
+          <tr>
+            <td><input type="email" id="email" name="email" required></td>
+          </tr>
+          <tr>
+            <td><label for="rating">Rating:</label></td>
+          </tr>
+          <tr>
+            <td>
+              <select id="rating" name="rating" required>
+                <option value="" disabled selected>Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="submit-cell">
+              <button type="submit" class="submit-btn">Submit</button>
+            </td>
+          </tr>
+        </table>
+    </form>
+  </div>
+
+  <div id="thank-you-message">
+    <p>Thank You for your valuable feedback. <br>
+    Redirecting you to the Home Page...</p>
+  </div>
+
+  <script>
+    document.getElementById("feedback-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+  // Hide the feedback form
+    document.getElementById("feedback-box").style.display = "none";
+
+  // Show the thank-you message
+    document.getElementById("thank-you-message").style.display = "block";
+
+  // Add a class to blur the background
+    document.body.classList.add("show-message");
+
+  // Redirect to the home page after 3 seconds
+    setTimeout(function() {
+      window.location.href = "{{ url_for('index') }}";
+    }, 3000);
+});
+
+  </script>
+  
+  <style>
+    #thank-you-message {
+      display: none; /* Initially hidden */
+      background-color: rgba(0, 0, 0, 0.8); /* Translucent black background */
+      color: white; /* Text color for contrast */
+      padding: 20px; /* Add padding inside the box */
+      border-radius: 10px; /* Rounded corners */
+      text-align: center; /* Center align the text */
+      position: fixed; /* Keep it fixed on the screen */
+      top: 50%; /* Position it in the center of the screen */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Adjust for perfect centering */
+      z-index: 1000; /* Ensure it appears above other elements */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for highlighting */
+    }
+  
+  </style>
+</body>
+</html>

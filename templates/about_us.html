@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenify - Eco-Friendly Product Finder</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src = "../static/images/logo.png" alt = "Greenify Logo" class = "logo">
+        <h1>GREENIFY</h1>
+        <nav class="dropdown">
+          <button class="btn-25 dropdown-toggle">Menu</button>
+          <ul class="dropdown-menu">
+             <li><a href="{{ url_for('index') }}" class="btn-25">Home</a></li>
+             <li><a href="{{ url_for('about_us') }}" class="btn-25">About Us</a></li>
+             <li><a href="{{ url_for('products') }}" class="btn-25">Products</a></li>
+             <li><a href="{{ url_for('feedback') }}" class="btn-25">Feedback</a></li>
+          </ul>
+       </nav>
+    </header>
+    <div class = "container">
+        <img src = "../static/images/about-bg.jpg" alt = "bgimage" class="bgimageabt"></img>
+        <div class="about-me-main">
+            <div class = "overlaytext">
+                <!-- <p class = "title">About Us</p> -->
+            </div>
+            <div class="about-me-cont">
+              <h2>Mission for Greenify 🌱</h2>
+              <p>
+                <b>Promote Sustainability:</b> Educate users about the environmental benefits of organic and eco-friendly products through detailed comparisons and insights.<br>
+                <b>Simplify Choices:</b> Provide an intuitive platform to discover and compare market bestsellers with their eco-friendly counterparts.<br>
+                <b>Drive Awareness:</b> Use data visualization and storytelling to highlight the impact of adopting sustainable practices on personal health and the environment.<br>
+                <b>Encourage Change:</b> Build a community of conscious consumers who are committed to reducing their ecological footprint.
+              </p>
+              <br>
+              <h2>Vision for Greenify 🌍</h2>
+              <p>
+                To inspire and empower individuals to make eco-friendly choices by seamlessly connecting them with sustainable products, fostering a greener and healthier planet for future generations.
+              </p>
+              <br>
+              <h2>How You Can Contribute to Greenify 🌿</h2>
+              <p>
+                <b>Adopt Eco-Friendly Products:</b><br>
+                Start making conscious choices by switching to organic and sustainable alternatives for your daily needs. Every small change contributes to a greener planet!<br>
+                
+                <b>Share Your Feedback:</b><br>
+                Help us improve by sharing your thoughts and experiences through our feedback form. Your suggestions make Greenify better for everyone.<br>
+                
+                <b>Spread the Word:</b><br>
+                Encourage your friends and family to join the movement. Share Greenify on social media and inspire others to go green. 🌍<br>
+                
+                <b>Recommend Products:</b><br>
+                Found an eco-friendly product you love? Let us know! We're always looking to expand our database with great options.<br>
+              </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

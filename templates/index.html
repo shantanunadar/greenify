@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Greenify - Eco-Friendly Product Finder</title>
+      <link rel="stylesheet" href="../static/css/style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <header class="d-flex align-items-center justify-content-between flex-wrap">
+         <img src = "../static/images/logo.png" alt = "Greenify Logo" class = "logo">
+         <h1 class="text-center flex-grow-1">GREENIFY</h1>
+         <nav class="dropdown">
+            <button class="btn-25 dropdown-toggle">Menu</button>
+            <ul class="dropdown-menu">
+               <li><a href="{{ url_for('index') }}" class="btn-25">Home</a></li>
+             <li><a href="{{ url_for('about_us') }}" class="btn-25">About Us</a></li>
+             <li><a href="{{ url_for('products') }}" class="btn-25">Products</a></li>
+             <li><a href="{{ url_for('feedback') }}" class="btn-25">Feedback</a></li>
+            </ul>
+         </nav>
+      </header>
+      <div class = "container1">
+         <img src = "../static/images/bgimage.jpg" alt = "bgimage" class="bgimage"></img>
+         <div class = "focusimgdiv" id="focusimgdiv">
+            <img src = "../static/images/bgfocus.png" class = "focusdiv" id="focusdiv"></img>
+         </div>
+         <div id="popup1" class="popup1">
+            Eco-friendly products are often made using sustainable practices that significantly reduce carbon emissions, helping to combat climate change.
+         </div>
+         <div id="popup2" class="popup2">
+            Many eco-friendly products are made from biodegradable materials, meaning they break down naturally without harming the environment.
+         </div>
+         <div id="popup3" class="popup3">
+            Eco-friendly products often replace single-use plastics with sustainable alternatives like bamboo, glass, or recycled materials, reducing plastic pollution in oceans and landfills.
+         </div>
+         <div id="popup4" class="popup4">
+            By opting for products with minimal or recyclable packaging, you contribute to reducing the overall waste that ends up in landfills.
+         </div>
+         <div id="popup5" class="popup5">
+            Eco-friendly products are designed to use fewer natural resources, such as water and energy, promoting conservation and reducing waste.
+         </div>
+         <div id="popup6" class="popup6">
+            Although eco-friendly products may have a higher upfront cost, they often last longer and can save money in the long run due to their durability and efficiency.
+         </div>
+         <div id="popup7" class="popup7">
+            Eco-friendly appliances and electronics are designed to consume less energy, leading to lower utility bills and a reduced environmental impact.
+         </div>
+         <div id="popup8" class="popup8">
+            Some eco-friendly products, particularly in agriculture and textiles, are produced with methods that use significantly less water, a critical resource in many parts of the world.
+         </div>
+      </div>
+      <script src = "../static/js/script.js"></script>
+   </body>
+</html>

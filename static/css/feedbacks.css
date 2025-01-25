@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('../images/feedback_image.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.feedback-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px 0; /* Minimal spacing between rows */
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%; /* Ensures all input/select fields are of equal width */
+  padding: 6px;
+  margin: 0; /* Removes extra space around elements */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  font-size: 16px; /* Ensures consistent font size for uniform appearance */
+}
+
+select {
+  height: 38px; /* Matches the height of input boxes */
+}
+
+.submit-cell {
+  text-align: center; /* Align the submit button to the end of the table */
+  padding-top: 10px; /* Add a bit of spacing above the button */
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  border: 2px solid transparent;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+  background-color: #45a049;
+}
